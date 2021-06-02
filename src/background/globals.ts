@@ -10,7 +10,6 @@ var data = {
     disabled: false,
     muteall: false,
   },
-  _gaq: null,
   OS: null,
   prevFullScreen: null,
   currentTab: null,

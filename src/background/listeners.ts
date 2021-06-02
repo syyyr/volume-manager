@@ -110,12 +110,6 @@ chrome.runtime.onConnect.addListener(function(port) {
 
 // SIMPLE POPUP MESSAGES listener
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-    if(request.how == 'popup'){
-        data._gaq.push(['_trackEvent', 'popup', request.what]);
-    }
-    if(request.how == 'stats'){
-        data._gaq.push(['_trackEvent', 'stats', request.what]);
-    }
     if(request.endpoint == 'settings'){
         data.user[request.how] = request.data;
         chrome.storage.sync.set({users: data.user});

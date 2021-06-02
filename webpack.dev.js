@@ -5,7 +5,6 @@ const ChromeExtensionReloader  = require('webpack-chrome-extension-reloader');
 module.exports = merge(common, {
   mode: "development",
   devtool: "inline-source-map",
-  watch: true,
   entry: {
       'content-script': './src/content/main.ts',
       background: './src/background/main.ts'
